@@ -10,21 +10,25 @@ kubectl describe quota --kubeconfig=kubeconfig
 
 kubectl edit resourcequota team15 -n team15 --kubeconfig=kubeconfig
 
-kubectl run test-app --image=flexberry/ember-flexberry-stand-backend --port 6500 --kubeconfig=kubeconfig --requests="cpu=2,memory=1G,requests.storage=1G"
+kubectl run metaverse-app --image=bratchikov/metaverse-app --port 80 --kubeconfig=kubeconfig --requests="cpu=2,memory=1G"
 
-kubectl run test-app-db --image=flexberry/ember-flexberry-stand-postgres --port 5432 --kubeconfig=kubeconfig --requests="cpu=2,memory=1G,requests.storage=10G"
+kubectl run metaverse-postgre-sql --image=bratchikov/metaverse-postgre-sql --port 5432 --kubeconfig=kubeconfig --requests="cpu=2,memory=1G"
 
-kubectl expose pod test-app-db --port 5432 --type=NodePort -n team15 --kubeconfig=kubeconfig 
+kubectl expose pod metaverse-postgre-sql --port 5432 --type=NodePort -n team15 --kubeconfig=kubeconfig 
 
-kubectl expose pod test-app --port 6500 --type=NodePort -n team15 --kubeconfig=kubeconfig 
-
+kubectl expose pod metaverse-app --port 80 --type=NodePort -n team15 --kubeconfig=kubeconfig 
 
 kubectl get svc -n team15 --kubeconfig=kubeconfig
 
+kubectl set image bratchikov/metaverse-app metaverse-app=bratchikov/metaverse-app:latest --kubeconfig=kubeconfig
+
+kubectl rollout restart team15/metaverse-app --kubeconfig=kubeconfig
+
+
 kubectl delete pod test-app --kubeconfig=kubeconfig
-kubectl delete svс  test-app --kubeconfig=kubeconfig
+kubectl delete service  test-app --kubeconfig=kubeconfig
 
 kubectl delete pod test-app-db --kubeconfig=kubeconfig
-kubectl delete svс  test-app-db --kubeconfig=kubeconfig
+kubectl delete service  test-app-db --kubeconfig=kubeconfig
 
 ```
