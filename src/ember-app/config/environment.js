@@ -12,7 +12,7 @@ module.exports = function(environment) {
 
   if (environment === 'docker') {
     // For docker backendUrl setting.
-    backendUrl = '/';
+    backendUrl = 'http://45.134.255.154:32726';
   }
 
   let ENV = {

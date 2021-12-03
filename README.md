@@ -20,12 +20,7 @@ kubectl expose pod metaverse-app --port 80 --type=NodePort -n team15 --kubeconfi
 
 kubectl get svc -n team15 --kubeconfig=kubeconfig
 
-kubectl set image bratchikov/metaverse-app metaverse-app=bratchikov/metaverse-app:latest --kubeconfig=kubeconfig
-
-kubectl rollout restart team15/metaverse-app --kubeconfig=kubeconfig
-
-
-kubectl delete pod test-app --kubeconfig=kubeconfig
+kubectl delete pod metaverse-app --kubeconfig=kubeconfig
 kubectl delete service  test-app --kubeconfig=kubeconfig
 
 kubectl delete pod test-app-db --kubeconfig=kubeconfig
