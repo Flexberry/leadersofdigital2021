@@ -1,0 +1,14 @@
+﻿{
+  "propertyLookup": [],
+  "external": false,
+  "caption": "Social network",
+  "name": "TVMetaverseSocialNetworkE",
+  "className": "SocialNetworkE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "t-v-metaverse-social-network",
+      "modelProjection": "SocialNetworkE"
+    }
+  ]
+}

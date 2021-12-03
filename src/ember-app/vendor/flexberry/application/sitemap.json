@@ -1,0 +1,50 @@
+﻿{
+  "applicationCaption": "Metaverse",
+  "applicationTitle": "Metaverse",
+  "items": [
+    {
+      "link": null,
+      "menuName": "metaverse",
+      "caption": "Metaverse",
+      "title": "Metaverse",
+      "children": [
+        {
+          "link": "t-v-metaverse-chat-bot-message-l",
+          "menuName": null,
+          "caption": "Chat bot message",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "t-v-metaverse-request-person-data-l",
+          "menuName": null,
+          "caption": "Request person data",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "t-v-metaverse-social-network-l",
+          "menuName": null,
+          "caption": "Social network",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "t-v-metaverse-person-meta-data-l",
+          "menuName": null,
+          "caption": "Person meta data",
+          "title": "",
+          "children": null
+        },
+        {
+          "link": "t-v-metaverse-person-l",
+          "menuName": null,
+          "caption": "Person",
+          "title": "",
+          "children": null
+        }
+      ]
+    }
+  ],
+  "mobile": true
+}

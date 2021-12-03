@@ -1,0 +1,14 @@
+﻿{
+  "nameSpace": "TV.Metaverse",
+  "className": "DataType",
+  "enumObjects": {
+    "Anket": "",
+    "News": "",
+    "Dialogues": "",
+    "CommentsOwn": "",
+    "CommentsAbout": "",
+    "Photo": "",
+    "Video": "",
+    "Other": ""
+  }
+}

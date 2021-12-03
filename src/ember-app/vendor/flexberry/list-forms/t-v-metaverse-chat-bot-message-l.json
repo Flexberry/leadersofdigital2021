@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "t-v-metaverse-chat-bot-message-e",
+  "editForm": "t-v-metaverse-chat-bot-message-e",
+  "external": false,
+  "caption": "Chat bot message",
+  "name": "TVMetaverseChatBotMessageL",
+  "className": "ChatBotMessageL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "t-v-metaverse-chat-bot-message",
+      "modelProjection": "ChatBotMessageL"
+    }
+  ]
+}

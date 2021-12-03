@@ -1,0 +1,197 @@
+﻿{
+  "name": "TVMetaversePersonMetaData",
+  "modelName": "t-v-metaverse-person-meta-data",
+  "className": "PersonMetaData",
+  "nameSpace": "TV.Metaverse",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "url",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "dateTime",
+      "type": "date",
+      "flexberryType": "NullableDateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "dataType",
+      "type": "t-v-metaverse-data-type",
+      "flexberryType": "DataType",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": false,
+      "name": "person",
+      "relatedTo": "t-v-metaverse-person",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": false,
+      "name": "author",
+      "relatedTo": "t-v-metaverse-person",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "PersonMetaDataE",
+      "modelName": "t-v-metaverse-person-meta-data",
+      "attrs": [
+        {
+          "name": "url",
+          "caption": "Url",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "dateTime",
+          "caption": "Date time",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "dataType",
+          "caption": "Data type",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "EsiaId",
+          "lookupValueField": "esiaId",
+          "relationName": "Author",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "esiaId",
+              "caption": "Esia id",
+              "hidden": true,
+              "index": 4
+            }
+          ],
+          "index": 3,
+          "type": "standard",
+          "caption": "Author",
+          "name": "author",
+          "relatedTo": "t-v-metaverse-person",
+          "inverse": null
+        },
+        {
+          "lookupValue": "EsiaId",
+          "lookupValueField": "esiaId",
+          "relationName": "Person",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "esiaId",
+              "caption": "Esia id",
+              "hidden": true,
+              "index": 6
+            }
+          ],
+          "index": 5,
+          "type": "standard",
+          "caption": "Person",
+          "name": "person",
+          "relatedTo": "t-v-metaverse-person",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "PersonMetaDataL",
+      "modelName": "t-v-metaverse-person-meta-data",
+      "attrs": [
+        {
+          "name": "url",
+          "caption": "Url",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "dateTime",
+          "caption": "Date time",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "dataType",
+          "caption": "Data type",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Author",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "esiaId",
+              "caption": "Esia id",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Esia id",
+          "name": "author",
+          "relatedTo": "t-v-metaverse-person",
+          "inverse": null
+        },
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Person",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "esiaId",
+              "caption": "Esia id",
+              "hidden": false,
+              "index": 4
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Esia id",
+          "name": "person",
+          "relatedTo": "t-v-metaverse-person",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

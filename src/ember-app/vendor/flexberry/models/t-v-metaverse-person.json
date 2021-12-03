@@ -1,0 +1,194 @@
+﻿{
+  "name": "TVMetaversePerson",
+  "modelName": "t-v-metaverse-person",
+  "className": "Person",
+  "nameSpace": "TV.Metaverse",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "esiaId",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "name",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "middleName",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "surname",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "birthday",
+      "type": "date",
+      "flexberryType": "NullableDateTime",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "sex",
+      "type": "t-v-metaverse-sex",
+      "flexberryType": "Sex",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "reputation",
+      "type": "number",
+      "flexberryType": "int",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [],
+  "hasMany": [
+    {
+      "name": "personAccount",
+      "relatedTo": "t-v-metaverse-person-account",
+      "inverse": "person"
+    }
+  ],
+  "projections": [
+    {
+      "name": "PersonE",
+      "modelName": "t-v-metaverse-person",
+      "attrs": [
+        {
+          "name": "esiaId",
+          "caption": "Esia id",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "name",
+          "caption": "Name",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "middleName",
+          "caption": "Middle name",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "surname",
+          "caption": "Surname",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "birthday",
+          "caption": "Birthday",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "sex",
+          "caption": "Sex",
+          "hidden": false,
+          "index": 5
+        },
+        {
+          "name": "reputation",
+          "caption": "Reputation",
+          "hidden": false,
+          "index": 6
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": [
+        {
+          "projectionName": "PersonAccountE",
+          "caption": "Person account",
+          "name": "personAccount",
+          "relatedTo": "t-v-metaverse-person-account",
+          "inverse": null
+        }
+      ]
+    },
+    {
+      "name": "PersonL",
+      "modelName": "t-v-metaverse-person",
+      "attrs": [
+        {
+          "name": "esiaId",
+          "caption": "Esia id",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "name",
+          "caption": "Name",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "middleName",
+          "caption": "Middle name",
+          "hidden": false,
+          "index": 2
+        },
+        {
+          "name": "surname",
+          "caption": "Surname",
+          "hidden": false,
+          "index": 3
+        },
+        {
+          "name": "birthday",
+          "caption": "Birthday",
+          "hidden": false,
+          "index": 4
+        },
+        {
+          "name": "sex",
+          "caption": "Sex",
+          "hidden": false,
+          "index": 5
+        },
+        {
+          "name": "reputation",
+          "caption": "Reputation",
+          "hidden": false,
+          "index": 6
+        }
+      ],
+      "belongsTo": [],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

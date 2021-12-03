@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "t-v-metaverse-request-person-data-e",
+  "editForm": "t-v-metaverse-request-person-data-e",
+  "external": false,
+  "caption": "Request person data",
+  "name": "TVMetaverseRequestPersonDataL",
+  "className": "RequestPersonDataL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "t-v-metaverse-request-person-data",
+      "modelProjection": "RequestPersonDataL"
+    }
+  ]
+}

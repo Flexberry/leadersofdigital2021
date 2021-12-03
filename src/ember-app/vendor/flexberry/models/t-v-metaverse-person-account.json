@@ -1,0 +1,77 @@
+﻿{
+  "name": "TVMetaversePersonAccount",
+  "modelName": "t-v-metaverse-person-account",
+  "className": "PersonAccount",
+  "nameSpace": "TV.Metaverse",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "accountId",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "socialNetwork",
+      "relatedTo": "t-v-metaverse-social-network",
+      "inverse": null
+    },
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "person",
+      "relatedTo": "t-v-metaverse-person",
+      "inverse": "personAccount"
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "PersonAccountE",
+      "modelName": "t-v-metaverse-person-account",
+      "attrs": [
+        {
+          "name": "accountId",
+          "caption": "Account id",
+          "hidden": false,
+          "index": 0
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "Name",
+          "lookupValueField": "name",
+          "relationName": "SocialNetwork",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "name",
+              "caption": "Name",
+              "hidden": true,
+              "index": 2
+            }
+          ],
+          "index": 1,
+          "type": "standard",
+          "caption": "Social network",
+          "name": "socialNetwork",
+          "relatedTo": "t-v-metaverse-social-network",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

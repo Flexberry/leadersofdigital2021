@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Person",
+      "projection": "PersonL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Request person data",
+  "name": "TVMetaverseRequestPersonDataE",
+  "className": "RequestPersonDataE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "t-v-metaverse-request-person-data",
+      "modelProjection": "RequestPersonDataE"
+    }
+  ]
+}

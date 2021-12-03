@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": null,
+      "displayAttributeName": null,
+      "required": false,
+      "relationName": "Person",
+      "projection": "PersonL",
+      "detailModelName": null
+    }
+  ],
+  "external": false,
+  "caption": "Chat bot message",
+  "name": "TVMetaverseChatBotMessageE",
+  "className": "ChatBotMessageE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "t-v-metaverse-chat-bot-message",
+      "modelProjection": "ChatBotMessageE"
+    }
+  ]
+}

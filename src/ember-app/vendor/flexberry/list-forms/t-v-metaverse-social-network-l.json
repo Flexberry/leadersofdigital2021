@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "t-v-metaverse-social-network-e",
+  "editForm": "t-v-metaverse-social-network-e",
+  "external": false,
+  "caption": "Social network",
+  "name": "TVMetaverseSocialNetworkL",
+  "className": "SocialNetworkL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "t-v-metaverse-social-network",
+      "modelProjection": "SocialNetworkL"
+    }
+  ]
+}

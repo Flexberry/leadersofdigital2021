@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "t-v-metaverse-person-meta-data-e",
+  "editForm": "t-v-metaverse-person-meta-data-e",
+  "external": false,
+  "caption": "Person meta data",
+  "name": "TVMetaversePersonMetaDataL",
+  "className": "PersonMetaDataL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "t-v-metaverse-person-meta-data",
+      "modelProjection": "PersonMetaDataL"
+    }
+  ]
+}

@@ -1,0 +1,148 @@
+﻿{
+  "name": "TVMetaverseChatBotMessage",
+  "modelName": "t-v-metaverse-chat-bot-message",
+  "className": "ChatBotMessage",
+  "nameSpace": "TV.Metaverse",
+  "parentModelName": null,
+  "parentClassName": null,
+  "attrs": [
+    {
+      "name": "dateTime",
+      "type": "date",
+      "flexberryType": "DateTime",
+      "notNull": false,
+      "defaultValue": "UtcNow",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "text",
+      "type": "string",
+      "flexberryType": "string",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    },
+    {
+      "name": "chatMessageType",
+      "type": "t-v-metaverse-chat-message-type",
+      "flexberryType": "ChatMessageType",
+      "notNull": false,
+      "defaultValue": "",
+      "stored": true,
+      "ordered": false
+    }
+  ],
+  "belongsTo": [
+    {
+      "polymorphic": false,
+      "presence": true,
+      "name": "person",
+      "relatedTo": "t-v-metaverse-person",
+      "inverse": null
+    }
+  ],
+  "hasMany": [],
+  "projections": [
+    {
+      "name": "ChatBotMessageE",
+      "modelName": "t-v-metaverse-chat-bot-message",
+      "attrs": [
+        {
+          "name": "dateTime",
+          "caption": "Date time",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "text",
+          "caption": "Text",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "chatMessageType",
+          "caption": "Chat message type",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": "EsiaId",
+          "lookupValueField": "esiaId",
+          "relationName": "Person",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "esiaId",
+              "caption": "Esia id",
+              "hidden": true,
+              "index": 4
+            }
+          ],
+          "index": 3,
+          "type": "standard",
+          "caption": "Person",
+          "name": "person",
+          "relatedTo": "t-v-metaverse-person",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    },
+    {
+      "name": "ChatBotMessageL",
+      "modelName": "t-v-metaverse-chat-bot-message",
+      "attrs": [
+        {
+          "name": "dateTime",
+          "caption": "Date time",
+          "hidden": false,
+          "index": 0
+        },
+        {
+          "name": "text",
+          "caption": "Text",
+          "hidden": false,
+          "index": 1
+        },
+        {
+          "name": "chatMessageType",
+          "caption": "Chat message type",
+          "hidden": false,
+          "index": 2
+        }
+      ],
+      "belongsTo": [
+        {
+          "lookupValue": null,
+          "lookupValueField": null,
+          "relationName": "Person",
+          "belongsTo": [],
+          "hidden": false,
+          "attrs": [
+            {
+              "name": "esiaId",
+              "caption": "Esia id",
+              "hidden": false,
+              "index": 3
+            }
+          ],
+          "index": -1,
+          "type": "default",
+          "caption": "Esia id",
+          "name": "person",
+          "relatedTo": "t-v-metaverse-person",
+          "inverse": null
+        }
+      ],
+      "hasMany": []
+    }
+  ],
+  "stored": true,
+  "offline": true,
+  "external": false
+}

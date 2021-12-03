@@ -1,0 +1,15 @@
+﻿{
+  "newForm": "t-v-metaverse-person-e",
+  "editForm": "t-v-metaverse-person-e",
+  "external": false,
+  "caption": "Person",
+  "name": "TVMetaversePersonL",
+  "className": "PersonL",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "t-v-metaverse-person",
+      "modelProjection": "PersonL"
+    }
+  ]
+}

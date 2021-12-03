@@ -1,0 +1,23 @@
+﻿{
+  "propertyLookup": [
+    {
+      "master": "socialNetwork",
+      "displayAttributeName": "name",
+      "required": true,
+      "relationName": "PersonAccount.SocialNetwork",
+      "projection": "SocialNetworkL",
+      "detailModelName": "t-v-metaverse-person-account"
+    }
+  ],
+  "external": false,
+  "caption": "Person",
+  "name": "TVMetaversePersonE",
+  "className": "PersonE",
+  "attrs": [],
+  "projections": [
+    {
+      "modelName": "t-v-metaverse-person",
+      "modelProjection": "PersonE"
+    }
+  ]
+}
